@@ -269,24 +269,42 @@
 @media (width >= 768px) {
   .header {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
     padding: 20px;
   }
 
   .header__theme-menu {
     grid-column: 2;
     grid-row: 1;
+    margin-block-start: 15vh;
   }
 
   .header__title {
     grid-column: 1 / -1;
     grid-row: 2;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline-start: -20px;
   }
 
   .header__description {
     grid-column: 2;
     grid-row: 3;
-    margin-block-end: 0;
+    margin-block-end: 15vh;
+  }
+
+  .header__decor {
+    inset-block-start: 20px;
+    inset-inline-end: 48px;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
   }
 
   .content {
@@ -297,6 +315,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 20px;
+    margin-block-start: 60px;
   }
 
   .problems__title {
@@ -307,6 +326,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 20px;
+    margin-block-start: 80px;
   }
 
   .reasons__list {
@@ -319,6 +339,7 @@
     column-gap: 20px;
     row-gap: 20px;
     align-items: start;
+    margin-block-start: 80px;
   }
 
   .advices__title {
@@ -333,6 +354,15 @@
 
   .advices__list {
     grid-column: 2;
+  }
+
+  .gallery {
+    margin-block-start: 80px;
+    margin-block-end: 60px;
+  }
+
+  .gallery__title {
+    margin-block-end: 20px;
   }
 
   .gallery__list {
